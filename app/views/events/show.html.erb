@@ -1,4 +1,5 @@
 <h1>Events#show</h1>
+<p>参加人数: <%= @entry_count %></p>
 <%= form_for :event_entry, url: event_event_entry_path(@event, @event_entry) do |f| %>
   <%= f.submit %>
 <% end %>
