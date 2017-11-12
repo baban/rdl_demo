@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  extend RDL::Annotate
   def index
     RDL.var_type :@events, 'Array<Event>'
     @events = Event.all
