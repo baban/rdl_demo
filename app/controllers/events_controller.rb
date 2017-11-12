@@ -1,6 +1,3 @@
-require 'rdl'
-require 'types/core'
-
 class EventsController < ApplicationController
   extend RDL::Annotate
   def index
