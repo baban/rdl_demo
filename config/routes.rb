@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'event_entries/create'
+
   resources :events, only: %i[index show] do
     resource :event_entry, only: [:create]
   end
