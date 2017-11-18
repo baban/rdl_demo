@@ -10,15 +10,8 @@ class Event < ApplicationRecord
     10
   end
 
-  type '() -> Event', typecheck: :later
+  type '() -> self', typecheck: :later
   def self.first_event
-    Event.find(1)
+    Event.first
   end
 end
-
-RDL.nowrap :'ActiveRecord::Core::ClassMethods'
-RDL.type_params :'ActiveRecord::Core::ClassMethods', [:t], :all?
-RDL.type :'ActiveRecord::Core::ClassMethods', :find, '(Integer) -> Event'
-RDL.type :'ActiveRecord::Core::ClassMethods', :find_by, '(Integer) -> Event or Nil'
-RDL.type :'ActiveRecord::Core::ClassMethods', :find_by!, '(Integer) -> Event'
-RDL.type :'ActiveRecord::Core::ClassMethods', :first, '() -> Event'
