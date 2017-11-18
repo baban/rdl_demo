@@ -5,4 +5,9 @@ class Event < ApplicationRecord
   def hoge
     10
   end
+
+  type '() -> Event', typecheck: :later
+  def first_event
+    Event.first
+  end
 end
