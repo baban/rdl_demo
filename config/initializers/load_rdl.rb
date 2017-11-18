@@ -1,6 +1,7 @@
 require 'rdl'
 require 'types/core'
 
+require 'types/rails/_helpers.rb'
 require 'types/rails/active_record/base.rb'
 require 'types/rails/abstract_controller/translation.rb'
 require 'types/rails/active_record/core.rb'
@@ -34,6 +35,5 @@ require 'types/rails/active_model/validations.rb'
 require 'types/rails/string.rb'
 require 'types/rails/active_record/associations.rb'
 require 'types/rails/time.rb'
-=begin
-require 'types/rails/_helpers.rb'
-=end
+
+require 'active_record/core_type'
