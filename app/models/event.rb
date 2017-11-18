@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  # カラムの情報(Event#id)等が追加される
+  extend ActiveRecord::ModelSchema::ClassMethods
   has_many :event_entries
 
   type '() -> Integer', typecheck: :later
@@ -7,7 +9,7 @@ class Event < ApplicationRecord
   end
 
   type '() -> Event', typecheck: :later
-  def first_event
-    Event.first
+  def self.first
+    super
   end
 end
